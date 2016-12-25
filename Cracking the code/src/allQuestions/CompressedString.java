@@ -26,17 +26,17 @@ public class CompressedString {
 
 	private static void compressedStrings(String str) {
 		// TODO Auto-generated method stub
-	char[] var= str.toCharArray();
-	StringBuffer sb= new StringBuffer();
-	char prev,curr;
-	prev = var[0];
-	sb.append(prev);
-	int count =1;
+		char[] var= str.toCharArray();
+		StringBuffer sb= new StringBuffer();
+		char prev,curr;
+		prev = var[0];
+		sb.append(prev);
+		int count =1;
 		for(int i=1;i<str.length();i++)
 		{
 			curr=var[i];
-			
-		    if(curr==prev)
+
+			if(curr==prev)
 			{
 				count++;
 			}
@@ -46,11 +46,11 @@ public class CompressedString {
 				sb.append(curr);
 				prev=curr;
 				count=1;	
-			    
+
 			}
-		    
+
 		}
 		sb.append(count);
-	System.out.println(sb.toString());
+		System.out.println(sb.toString());
 	}
 }

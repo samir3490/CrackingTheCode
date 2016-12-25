@@ -23,27 +23,27 @@ public class QuestionOnePointFour {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-String str="",str1="";
+		String str="",str1="";
 
-str= takeInput();
-System.out.println(str);
-str1= modifyString(str);
-System.out.println(str1);
+		str= takeInput();
+		System.out.println(str);
+		str1= modifyString(str);
+		System.out.println(str1);
 	}
 
 	private static String modifyString(String str) {
 		// TODO Auto-generated method stub
-		
-		 String[] words = str.split(" ");
-		    StringBuilder sentence = new StringBuilder();
 
-		    for (int i = 0; i < words.length; i++) {
-		    	sentence.append(words[i]);
-		    	sentence.append("%20");
-		        
-		    }
+		String[] words = str.split(" ");
+		StringBuilder sentence = new StringBuilder();
 
-		    return sentence.toString();
+		for (int i = 0; i < words.length; i++) {
+			sentence.append(words[i]);
+			sentence.append("%20");
+
+		}
+
+		return sentence.toString();
 	}
 
 	static String takeInput() {
@@ -54,7 +54,7 @@ System.out.println(str1);
 		str= obj.nextLine();
 		return str;
 	}
-	
-	
+
+
 
 }

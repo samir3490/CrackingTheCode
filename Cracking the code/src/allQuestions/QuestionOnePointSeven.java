@@ -12,16 +12,16 @@ import java.util.Scanner;
  */
 public class QuestionOnePointSeven {
 
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	int row,column;
+		int row,column;
 		System.out.println("Enter size of matrix");
 		Scanner obj = new Scanner(System.in);
 		row=obj.nextInt();
 		column =obj.nextInt();
-		
-setZero(row, column);
+
+		setZero(row, column);
 	}
 
 	private static void setZero(int row, int column) {
@@ -39,23 +39,23 @@ setZero(row, column);
 				matrix[i][j]=mat.nextInt();
 			}
 		}
-		
+
 		int rowno=0,colno=0;
 		outerloop:
-		for(int i=0;i<row;i++)
-		{
-			for(int j=0;j<column;j++)
+			for(int i=0;i<row;i++)
 			{
-				if(matrix[i][j]==0)
+				for(int j=0;j<column;j++)
 				{
-					rowno=i;
-					colno=j;
-				break outerloop;	
+					if(matrix[i][j]==0)
+					{
+						rowno=i;
+						colno=j;
+						break outerloop;	
+					}
+
 				}
-				
 			}
-		}
-		
+
 		for(int i=0;i<row;i++)
 			matrix[i][colno]=0;
 
