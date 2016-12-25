@@ -22,18 +22,18 @@ public class OnePointEight {
 		QuestionOnePointFour obj=new QuestionOnePointFour();
 		str1= obj.takeInput();
 		str2=obj.takeInput();
-		
-result= isSubstring(str1,str2);
-System.out.println(result);
+
+		result= isSubstring(str1,str2);
+		System.out.println(result);
 	}
 
 	private static boolean isSubstring(String str1, String str2) {
 		// TODO Auto-generated method stub
 		int j=0,count=0;
 		if(str1.length()!=str2.length())
-					return false;
+			return false;
 		j= str1.length()-1;
-		
+
 		for(int i=0;i<str1.length();i++)
 		{
 			if(str1.charAt(i)==str2.charAt(j))
@@ -47,7 +47,7 @@ System.out.println(result);
 		if(count== str1.length())
 			return true;
 		else return false;
-		
+
 	}
 
 }
